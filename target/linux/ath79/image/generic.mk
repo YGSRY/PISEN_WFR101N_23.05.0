@@ -2377,7 +2377,7 @@ endef
 TARGET_DEVICES += pisen_wmm003n
 
 define Device/pisen_wfr101n
-$(Device/tplink-8mlzma)
+$(Device/tplink-16mlzma)
   SOC := ar9341
   DEVICE_VENDOR := PISEN
   DEVICE_MODEL := WFR101N
