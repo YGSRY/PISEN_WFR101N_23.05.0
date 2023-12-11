@@ -135,6 +135,8 @@
 
     status = "okay";
 
+    phy-handle = <&swphy0>;
+   
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
 	mac-address-increment = <(-1)>;
@@ -149,6 +151,8 @@
 
     compatible = "syscon", "simple-mfd";
     status = "okay";
+    
+    phy-handle = <&swphy4>;
 
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
