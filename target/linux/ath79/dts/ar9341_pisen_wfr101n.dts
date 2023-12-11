@@ -17,8 +17,6 @@
 		led-upgrade = &led_power_blue;
 	};
 
-
-
 	keys {
 		compatible = "gpio-keys";
 
@@ -119,7 +117,7 @@
 			};
 
 			partition@20000 {
-				compatible = "tplink,firmware";
+				compatible = "denx,uimage";
 				label = "firmware";
 				reg = <0x020000 0xfd0000>;
 			};
@@ -158,6 +156,11 @@
 	nvmem-cell-names = "mac-address";
 	
 	phy-handle = <&swphy4>;
+	
+	gmac-config {
+		device = <&gmac>;
+		switch-phy-swap = <0>;
+	};
 		
 	fixed-link {
 		speed = <1000>;
@@ -167,12 +170,7 @@
 
 &usb {
 	status = "okay";
-	
-	hub_port: port@1 {
-		reg = <1>;
-		#trigger-source-cells = <0>;
-	};
-};
+}
 
 &usb_phy {
 	status = "okay";
