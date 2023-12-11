@@ -138,9 +138,7 @@
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
 	mac-address-increment = <(-1)>;
-	
-	phy-handle = <&swphy0>;
-	
+		
 	fixed-link {
 		speed = <1000>;
 		full-duplex;
@@ -154,9 +152,7 @@
 
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
-	
-	phy-handle = <&swphy4>;
-	
+		
 	gmac-config {
 		device = <&gmac>;
 		switch-phy-swap = <0>;
@@ -170,7 +166,7 @@
 
 &usb {
 	status = "okay";
-}
+};
 
 &usb_phy {
 	status = "okay";
