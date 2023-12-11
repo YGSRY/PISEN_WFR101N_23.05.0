@@ -2377,12 +2377,12 @@ endef
 TARGET_DEVICES += pisen_wmm003n
 
 define Device/pisen_wfr101n
-$(Device/tplink-16mlzma)
+
   SOC := ar9341
   DEVICE_VENDOR := PISEN
   DEVICE_MODEL := WFR101N
   DEVICE_PACKAGES := kmod-usb2 kmod-usb-ledtrig-usbport
-  TPLINK_HWID := 0x07030101
+  IMAGE_SIZE := 16000k
 endef
 TARGET_DEVICES += pisen_wfr101n
 
