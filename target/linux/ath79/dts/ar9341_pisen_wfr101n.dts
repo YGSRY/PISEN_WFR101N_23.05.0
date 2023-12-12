@@ -11,7 +11,7 @@
 	compatible = "pisen,wfr101n", "qca,ar9341";
 
 	aliases {
-	    label-mac-device = &wmac;
+	    label-mac-device = &eth0;
 		led-boot = &led_power_blue;
 		led-failsafe = &led_power_blue;
 		led-running = &led_power_blue;
@@ -136,7 +136,7 @@
 
     status = "okay";
   
-	nvmem-cells = <&macaddr_uboot_1fc00>;
+	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
 	mac-address-increment = <(-1)>;
 		
@@ -146,7 +146,7 @@
 
     status = "okay";
 
-	nvmem-cells = <&macaddr_uboot_1fc00>;
+	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
 			
 };
@@ -166,12 +166,12 @@
 
 };
 	
-&uboot {
+&art {
 	compatible = "nvmem-cells";
 	#address-cells = <1>;
 	#size-cells = <1>;
 
-	macaddr_uboot_1fc00: macaddr@1fc00 {
-		reg = <0x1fc00 0x6>;
-    };
+	macaddr_art_0: macaddr@0 {
+		reg = <0x0 0x6>;
+	};
 };
