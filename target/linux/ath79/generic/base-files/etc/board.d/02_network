@@ -67,7 +67,7 @@ ath79_setup_interfaces()
 	pisen,ts-d084|\
 	pisen,wmb001n|\
 	pisen,wmm003n|\
-	pisen,wfr101n|\
+	pisen,wfr101nwww|\
 	ruckus,zf7321|\
 	ruckus,zf7341|\
 	ruckus,zf7351|\
@@ -127,7 +127,9 @@ ath79_setup_interfaces()
 	zyxel,nwa1121-ni|\
 	zyxel,nwa1123-ac|\
 	zyxel,nwa1123-ni)
-		ucidef_set_interfaces_lan_wan "eth0" "eth1"
+		ucidef_set_interfaces_lan_wan "eth1.1" "eth0"
+		ucidef_add_switch "switch0" \
+			"0@eth1" "1:lan:1" 
 		;;
 	airtight,c-75)
 		ucidef_add_switch "switch0" \
