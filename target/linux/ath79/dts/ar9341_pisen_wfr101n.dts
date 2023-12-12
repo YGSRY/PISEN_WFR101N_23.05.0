@@ -134,8 +134,6 @@
 &eth0 {
 
     status = "okay";
-
-    phy-handle = <&swphy0>;
    
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
