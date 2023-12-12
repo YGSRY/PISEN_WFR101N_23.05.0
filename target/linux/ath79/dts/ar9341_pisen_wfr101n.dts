@@ -135,6 +135,8 @@
 
     status = "okay";
    
+    phy-handle = <&swphy4>;
+    
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
 	mac-address-increment = <(-1)>;
@@ -148,8 +150,6 @@
 &eth1 {
 
     status = "okay";
-    
-    phy-handle = <&swphy4>;
 
 	nvmem-cells = <&macaddr_uboot_1fc00>;
 	nvmem-cell-names = "mac-address";
