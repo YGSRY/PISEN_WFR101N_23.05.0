@@ -67,7 +67,7 @@ ath79_setup_interfaces()
 	pisen,ts-d084|\
 	pisen,wmb001n|\
 	pisen,wmm003n|\
-	pisen,wfr101n|\
+	pisen,wfr101n00000|\
 	ruckus,zf7321|\
 	ruckus,zf7341|\
 	ruckus,zf7351|\
