@@ -136,7 +136,7 @@
 
     status = "okay";
   
-    phy-handle = <&swphy0>;
+    phy-handle = <&swphy4>;
   
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
@@ -148,7 +148,7 @@
 
     status = "okay";
 
-    phy-handle = <&swphy4>;
+    phy-handle = <&swphy0>;
 
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
