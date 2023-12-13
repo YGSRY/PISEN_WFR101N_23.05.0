@@ -243,7 +243,7 @@ ath79_setup_interfaces()
 	tplink,wbs510-v1|\
 	tplink,wbs510-v2|\
 	ubnt,routerstation)
-		ucidef_set_interfaces_lan_wan "eth0" "eth1"
+		ucidef_set_interfaces_lan_wan "eth1" "eth0"
 		;;
 	comfast,cf-e375ac)
 		ucidef_add_switch "switch0" \
