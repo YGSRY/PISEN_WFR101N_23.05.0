@@ -136,9 +136,11 @@
 
     status = "okay";
   
+    phy-handle = <&swphy0>;
+  
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
-	mac-address-increment = <(-1)>;
+	mac-address-increment = <1>;
 		
 };
 
@@ -146,9 +148,15 @@
 
     status = "okay";
 
+    phy-handle = <&swphy4>;
+
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
 			
+	gmac-config {
+		device = <&gmac>;
+		switch-phy-swap = <1>;
+	};
 };
 
 &usb {
