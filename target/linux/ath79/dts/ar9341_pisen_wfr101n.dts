@@ -148,7 +148,6 @@
 
 	nvmem-cells = <&macaddr_art_0>;
 	nvmem-cell-names = "mac-address";
-	};
 };
 
 &usb {
